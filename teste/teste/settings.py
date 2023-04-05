@@ -94,12 +94,11 @@ DATABASES = {
     'default': {
        # 'ENGINE': 'django.db.backends.sqlite3',
        # 'NAME': BASE_DIR / 'db.sqlite3',
-<<<<<<< HEAD
-        ##'ENGINE': 'django.db.backends.postgresql',
-        ##'NAME': 'postgres',
-        #'USER': 'masteruser',
-        #'PASSWORD': '12345678',
-        #'HOST': 'teste-db.czenacwbzgqz.eu-north-1.rds.amazonaws.com',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'postgres',
+        'USER': 'masteruser',
+        'PASSWORD': '12345678',
+        'HOST': 'teste-db.czenacwbzgqz.eu-north-1.rds.amazonaws.com',
         #'USER': 'useraws',
         #'PASSWORD': 'Qwerty1234',
         #'HOST': 'dbproj1.cnprtk3bvxit.eu-west-2.rds.amazonaws.com',
@@ -114,26 +113,24 @@ DATABASES = {
         #"PASSWORD": os.environ.get("SQL_PASSWORD", "password"),
         #"HOST": os.environ.get("SQL_HOST", "localhost"),
         #"PORT": os.environ.get("SQL_PORT", "5432"),
-	'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'postgres',
-        'USER': 'masteruser',
-        'PASSWORD': '12345678',
-        'HOST': 'teste-db.czenacwbzgqz.eu-north-1.rds.amazonaws.com',
-        'PORT': '5432'
-=======
-        'ENGINE': 'django.db.backends.postgresql',
+	    #'ENGINE': 'django.db.backends.postgresql',
         #'NAME': 'postgres',
-        'NAME': os.environ.get("DB_NAME"),
         #'USER': 'masteruser',
         #'PASSWORD': '12345678',
         #'HOST': 'teste-db.czenacwbzgqz.eu-north-1.rds.amazonaws.com',
-        'USER': os.environ.get("DB_USER"),
-        'PASSWORD': os.environ.get("DB_PASSWORD"),
-        'HOST': os.environ.get("HOST_DB"),
-        'PORT': os.environ.get("HOST_PORT"),
-        #"ENGINE": os.environ.get("SQL_ENGINE", "django.db.backends.sqlite3"),
+        'PORT': '5432'
 
->>>>>>> 7570b452ddc7b2549b9200ad14f15bc0e03b8205
+        #'ENGINE': 'django.db.backends.postgresql',
+        #'NAME': 'postgres',
+        #'NAME': os.environ.get("DB_NAME"),
+        #'USER': 'masteruser',
+        #'PASSWORD': '12345678',
+        #'HOST': 'teste-db.czenacwbzgqz.eu-north-1.rds.amazonaws.com',
+        #'USER': os.environ.get("DB_USER"),
+        #'PASSWORD': os.environ.get("DB_PASSWORD"),
+        #'HOST': os.environ.get("HOST_DB"),
+        #'PORT': os.environ.get("HOST_PORT"),
+        #"ENGINE": os.environ.get("SQL_ENGINE", "django.db.backends.sqlite3"),
     }
 }
 

@@ -12,6 +12,9 @@ https://docs.djangoproject.com/en/4.1/ref/settings/
 
 from pathlib import Path
 import os
+from dotenv import load_dotenv
+
+load_dotenv('.env.dev')
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -122,14 +125,14 @@ DATABASES = {
 
         #'ENGINE': 'django.db.backends.postgresql',
         #'NAME': 'postgres',
-        'NAME': 'dbproj1_pgres_aws', #os.environ.get("DB_NAME"),
+        'NAME': os.environ.get("DB_NAME"),
         #'USER': 'masteruser',
         #'PASSWORD': '12345678',
         #'HOST': 'teste-db.czenacwbzgqz.eu-north-1.rds.amazonaws.com',
-        'USER': 'useraws', #os.environ.get("DB_USER"),
-        'PASSWORD': 'Qwerty1234', #os.environ.get("DB_PASSWORD"),
-        'HOST': 'dbproj1aws.cnprtk3bvxit.eu-west-2.rds.amazonaws.com',  #os.environ.get("HOST_DB"),
-        'PORT': 5432  #os.environ.get("HOST_PORT"),
+        'USER': os.environ.get("DB_USER"),
+        'PASSWORD': os.environ.get("DB_PASSWORD"),
+        'HOST': os.environ.get("HOST_DB"),
+        'PORT': os.environ.get("HOST_PORT"),
     }
 }
 

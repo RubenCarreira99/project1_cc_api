@@ -95,11 +95,17 @@ DATABASES = {
        # 'ENGINE': 'django.db.backends.sqlite3',
        # 'NAME': BASE_DIR / 'db.sqlite3',
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'postgres',
-        'USER': 'masteruser',
-        'PASSWORD': '12345678',
-        'HOST': 'teste-db.czenacwbzgqz.eu-north-1.rds.amazonaws.com',
-        'PORT': '5432'
+        #'NAME': 'postgres',
+        'NAME': os.environ.get("DB_NAME"),
+        #'USER': 'masteruser',
+        #'PASSWORD': '12345678',
+        #'HOST': 'teste-db.czenacwbzgqz.eu-north-1.rds.amazonaws.com',
+        'USER': os.environ.get("DB_USER"),
+        'PASSWORD': os.environ.get("DB_PASSWORD"),
+        'HOST': os.environ.get("HOST_DB"),
+        'PORT': os.environ.get("HOST_PORT"),
+        #"ENGINE": os.environ.get("SQL_ENGINE", "django.db.backends.sqlite3"),
+
     }
 }
 

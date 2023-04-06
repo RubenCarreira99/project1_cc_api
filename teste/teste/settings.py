@@ -131,7 +131,7 @@ DATABASES = {
         #'HOST': 'teste-db.czenacwbzgqz.eu-north-1.rds.amazonaws.com',
         'USER': "useraws",  #os.environ.get("DB_USER"),
         'PASSWORD': "Qwerty1234",#os.environ.get("DB_PASSWORD"),
-        'HOST': "dbproj1aws.cnprtk3bvxit.eu-west-2.rds.amazonaws", #os.environ.get("HOST_DB"),
+        'HOST': "dbproj1aws.cnprtk3bvxit.eu-west-2.rds.amazonaws.com", #os.environ.get("HOST_DB"),
         'PORT': 5432, #os.environ.get("HOST_PORT"),
     }
 }

@@ -101,7 +101,8 @@ WSGI_APPLICATION = 'teste.wsgi.application'
 
 DATABASES = {
     'default': {
-        env.db()
+       
+       # env.db()
        # 'ENGINE': 'django.db.backends.sqlite3',
        # 'NAME': BASE_DIR / 'db.sqlite3',
         #'ENGINE': 'django.db.backends.postgresql',
@@ -130,16 +131,16 @@ DATABASES = {
         #'HOST': 'teste-db.czenacwbzgqz.eu-north-1.rds.amazonaws.com',
         #'PORT': '5432'
 
-        #'ENGINE': 'django.db.backends.postgresql',
+        'ENGINE': 'django.db.backends.postgresql',
         #'NAME': 'postgres',
         #'NAME': env('DB_NAME'), #os.environ.get('DB_NAME'), #'dbproj1_pgres_aws',
         #'USER': 'masteruser',
         #'PASSWORD': '12345678',
         #'HOST': 'teste-db.czenacwbzgqz.eu-north-1.rds.amazonaws.com',
-        #'USER': env('DB_USER'), #os.environ.get('DB_USER'), #'useraws', 
-        #'PASSWORD': env('DB_PASSWORD'), #os.environ.get('DB_PASSWORD'), #'Qwerty1234',
-        #'HOST': env('HOST_DB'), #os.environ.get('HOST_DB'), #'dbproj1aws.cnprtk3bvxit.eu-west-2.rds.amazonaws.com', #
-        #'PORT': env('HOST_PORT'), #os.environ.get('HOST_PORT'), #'5432',
+        'USER': env('DB_USER'), #os.environ.get('DB_USER'), #'useraws', 
+        'PASSWORD': env('DB_PASSWORD'), #os.environ.get('DB_PASSWORD'), #'Qwerty1234',
+        'HOST': env('DATABASE_URL'), #os.environ.get('HOST_DB'), #'dbproj1aws.cnprtk3bvxit.eu-west-2.rds.amazonaws.com', #
+        'PORT': env('HOST_PORT'), #os.environ.get('HOST_PORT'), #'5432',
     }
 }
 

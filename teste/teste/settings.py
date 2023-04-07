@@ -12,9 +12,15 @@ https://docs.djangoproject.com/en/4.1/ref/settings/
 
 from pathlib import Path
 import os
-from dotenv import load_dotenv
+#from dotenv import load_dotenv
+import environ 
 
-load_dotenv()
+#load_dotenv()
+env = environ.Env(
+    DEBUG=(bool, False)
+)
+
+environ.Env.read_env()
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -125,14 +131,14 @@ DATABASES = {
 
         #'ENGINE': 'django.db.backends.postgresql',
         #'NAME': 'postgres',
-        'NAME': os.environ.get('DB_NAME'), #'dbproj1_pgres_aws',
+        'NAME': env('DB_NAME'), #os.environ.get('DB_NAME'), #'dbproj1_pgres_aws',
         #'USER': 'masteruser',
         #'PASSWORD': '12345678',
         #'HOST': 'teste-db.czenacwbzgqz.eu-north-1.rds.amazonaws.com',
-        'USER': os.environ.get('DB_USER'), #'useraws', 
-        'PASSWORD': os.environ.get('DB_PASSWORD'), #'Qwerty1234',
-        'HOST': os.environ.get('HOST_DB'), #'dbproj1aws.cnprtk3bvxit.eu-west-2.rds.amazonaws.com', #
-        'PORT': os.environ.get('HOST_PORT'), #'5432',
+        'USER': env('DB_USER'), #os.environ.get('DB_USER'), #'useraws', 
+        'PASSWORD': env('DB_PASSWORD'), #os.environ.get('DB_PASSWORD'), #'Qwerty1234',
+        'HOST': env('HOST_DB'), #os.environ.get('HOST_DB'), #'dbproj1aws.cnprtk3bvxit.eu-west-2.rds.amazonaws.com', #
+        'PORT': env('HOST_PORT'), #os.environ.get('HOST_PORT'), #'5432',
     }
 }
 

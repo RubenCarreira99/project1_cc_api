@@ -24,10 +24,10 @@ RUN echo "from django.contrib.auth import get_user_model; User = get_user_model(
 
 EXPOSE 8000
 
-ENV DATABASE_URL=dbproj1aws.cnprtk3bvxit.eu-west-2.rds.amazonaws.com
-ENV DB_PORT=5432
-ENV DB_NAME=dbproj1_pgres_aws
-ENV DB_USER=useraws
-ENV DB_PASSWORD=Qwerty1234
+#ENV DATABASE_URL=dbproj1aws.cnprtk3bvxit.eu-west-2.rds.amazonaws.com
+#ENV DB_PORT=5432
+#ENV DB_NAME=dbproj1_pgres_aws
+#ENV DB_USER=useraws
+#ENV DB_PASSWORD=Qwerty1234
 
 CMD ["python", "manage.py", "runserver", "0.0.0.0:8000"]

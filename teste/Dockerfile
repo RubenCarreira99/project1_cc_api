@@ -18,6 +18,8 @@ RUN pip install -r ./requirements.txt
 
 COPY . .
 
+COPY ./.env .
+
 RUN chmod +x ./migratedb.sh
 
 EXPOSE 8000

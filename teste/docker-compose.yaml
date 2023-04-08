@@ -1,5 +1,6 @@
 services:
-  backend:
+  api_backend::
+    image: api_dockerized
     build: ./Dockerfile
     command: ./migratedb.sh
     ports:

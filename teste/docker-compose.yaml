@@ -1,3 +1,5 @@
+version: "3"
+
 services:
   api_backend::
     image: api_dockerized

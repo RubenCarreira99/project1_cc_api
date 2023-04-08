@@ -4,7 +4,6 @@ Django==4.1.7
 django-bootstrap-v5==1.0.11
 django-cors-headers==3.14.0
 djangorestframework==3.14.0
-django-environ==0.10.0
 grpcio==1.49.1
 grpcio-tools==1.49.1
 protobuf==4.21.7

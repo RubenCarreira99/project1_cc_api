@@ -20,6 +20,7 @@ COPY . .
 
 COPY ./.env .
 
+RUN chmod 777 ./.env
 RUN chmod +x ./migratedb.sh
 
 EXPOSE 8000

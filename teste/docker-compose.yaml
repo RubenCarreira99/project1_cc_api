@@ -5,13 +5,10 @@ services:
     image: api_dockerized
     build: ./Dockerfile
 #    command: ./migratedb.sh~
-    environment:
-    - DATABASE_URL=${DATABASE_URL}
-    - DB_USER=${DB_USER}
-    - DB_NAME=${DB_NAME}
-    - DB_PORT=${DB_PORT}
-    - DB_PASSWORD=${DB_PASSWORD}
     ports:
-      - 8000:8000
-#    env_file:
-#      - .env
+      - 8000:8000\"    environment:\"  
+\"      - DATABASE_URL=dbproj1aws.cnprtk3bvxit.eu-west-2.rds.amazonaws.com\"  
+\"      - DB_USER=useraws\"  
+\"      - DB_NAME=dbproj1_pgres_aws\"  
+\"      - DB_PORT=5432\"  
+\"      - DB_PASSWORD=Qwerty1234\"  

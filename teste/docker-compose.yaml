@@ -6,11 +6,11 @@ services:
     build: 
       context: .
       dockerfile: ./Dockerfile
-#    command: ./migratedb.sh~
+    command: ./migratedb.sh
     ports:
       - 8000:8000
     environment:
-      - DATABASE_URL=dbproj1aws.cnprtk3bvxit.eu-west-2.rds.amazonaws.com  
+      - DATABASE_URL=dbproj1aws.cnprtk3bvxit.eu-west-2.rds.amazonaws.com 
       - DB_USER=useraws
       - DB_NAME=dbproj1_pgres_aws
       - DB_PORT=5432

@@ -3,7 +3,9 @@ version: "3"
 services:
   apibackend:
     image: api_dockerized
-    build: ./Dockerfile
+    build: 
+      context: .
+      dockerfile: ./Dockerfile
 #    command: ./migratedb.sh~
     ports:
       - 8000:8000

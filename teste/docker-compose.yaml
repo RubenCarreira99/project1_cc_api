@@ -4,8 +4,14 @@ services:
   apibackend:
     image: api_dockerized
     build: ./Dockerfile
-    command: ./migratedb.sh
+#    command: ./migratedb.sh~
+    environment:
+    - DATABASE_URL=${DATABASE_URL}
+    - DB_USER=${DB_USER}
+    - DB_NAME=${DB_NAME}
+    - DB_PORT=${DB_PORT}
+    - DB_PASSWORD=${DB_PASSWORD}
     ports:
       - 8000:8000
-    env_file:
-      - .env
+#    env_file:
+#      - .env

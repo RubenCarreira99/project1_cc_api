@@ -12,15 +12,6 @@ https://docs.djangoproject.com/en/4.1/ref/settings/
 
 from pathlib import Path
 import os
-#from dotenv import load_dotenv
-#import environ 
-
-#load_dotenv()
-#env = environ.Env(
-#    DEBUG=(bool, False)
-#)
-
-#environ.Env.read_env()
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -55,10 +46,10 @@ INSTALLED_APPS = [
 ]
 
 
-CORS_ORIGIN_WHITELIST = (
+#CORS_ORIGIN_WHITELIST = (
     #'http://localhost:5173',
-    'http://localhost:1337',
-)
+ #   'http://localhost:1337',
+#)
 
 CORS_ORIGIN_ALLOW_ALL = True
 
@@ -102,15 +93,11 @@ WSGI_APPLICATION = 'teste.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        #'NAME': 'postgres',
-        'NAME': os.getenv('DB_NAME'),#, 'dbproj1_pgres_aws'),#'dbproj1_pgres_aws', #os.environ.get('DB_NAME'), 
-        #'USER': 'masteruser',
-        #'PASSWORD': '12345678',
-        #'HOST': 'teste-db.czenacwbzgqz.eu-north-1.rds.amazonaws.com',
-        'USER': os.getenv('DB_USER'), #'useraws'),#os.environ.get('DB_USER'), #'useraws',
-        'PASSWORD': os.getenv('DB_PASSWORD'),# 'Qwerty1234'), #os.environ.get('DB_PASSWORD'), #'Qwerty1234',
-        'HOST': os.getenv('DATABASE_URL'), # 'dbproj1aws.cnprtk3bvxit.eu-west-2.rds.amazonaws.com'),#os.environ.get('DATABASE_URL'), #'dbproj1aws.cnprtk3bvxit.eu-west-2.rds.amazonaws.com',
-        'PORT': os.getenv('DB_PORT'),# '5432'),#os.environ.get('DB_PORT'), #'5432',
+        'NAME': os.getenv('DB_NAME'),
+        'USER': os.getenv('DB_USER'),
+        'PASSWORD': os.getenv('DB_PASSWORD'),
+        'HOST': os.getenv('DATABASE_URL'),
+        'PORT': os.getenv('DB_PORT'),
     }
 }
 

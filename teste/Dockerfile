@@ -4,7 +4,7 @@ FROM python:latest
 # to the terminal with out buffering it first
 ENV PYTHONUNBUFFERED 1
 ENV PYTHONDONTWRITEBYTECODE 1
-ENV DJANGO_SUPERUSER_USERNAME=admin1234
+ENV DJANGO_SUPERUSER_USERNAME=admin
 ENV DJANGO_SUPERUSER_EMAIL=admin@example.com
 ENV DJANGO_SUPERUSER_PASSWORD=superuserpassword
 
@@ -22,4 +22,4 @@ RUN chmod 777 ./migratedb.sh
 
 EXPOSE 8000
 
-CMD ["python", "manage.py", "runserver", "0.0.0.0:8000"]
+#CMD ["python", "manage.py", "runserver", "0.0.0.0:8000"]

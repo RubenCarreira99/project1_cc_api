@@ -20,3 +20,9 @@ services:
       - DB_NAME=dbproj1_pgres_aws  
       - DB_PORT=5432  
       - DB_PASSWORD=Qwerty1234  
+      ###  
+      - DATABASE_URL=dbproj1aws.cnprtk3bvxit.eu-west-2.rds.amazonaws.com  
+      - DB_USER=useraws  
+      - DB_NAME=dbproj1_pgres_aws  
+      - DB_PORT=5432  
+      - DB_PASSWORD=Qwerty1234  

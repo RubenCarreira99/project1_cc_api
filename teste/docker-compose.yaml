@@ -13,4 +13,5 @@ services:
     #env vars for django db and super user
       - DJANGO_SUPERUSER_USERNAME=admin
       - DJANGO_SUPERUSER_EMAIL=admin@example.com
-      - DJANGO_SUPERUSER_PASSWORD=superuserpassword                                    
+      - DJANGO_SUPERUSER_PASSWORD=superuserpassword 
+      -                                   

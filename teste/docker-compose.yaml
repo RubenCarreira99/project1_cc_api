@@ -14,10 +14,9 @@ services:
       - DJANGO_SUPERUSER_USERNAME=admin
       - DJANGO_SUPERUSER_EMAIL=admin@example.com
       - DJANGO_SUPERUSER_PASSWORD=superuserpassword                                    
-
 ###
-      - DB_URL=${var.db_instance_address}
-      - DB_USER=${var.db_instance_username}
-      - DB_NAME=${var.db_name}
-      - DB_PORT=${var.db_instance_port}
-      - DB_PASSWORD=${var.db_instance_password}
+      - DB_URL=qwer
+      - DB_USER=werq
+      - DB_NAME=qwerqwe
+      - DB_PORT=qwerqwe
+      - DB_PASSWORD=qwer

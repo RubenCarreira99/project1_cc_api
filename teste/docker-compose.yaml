@@ -16,6 +16,7 @@ services:
       - DJANGO_SUPERUSER_PASSWORD=superuserpassword                                    
 ###
 ###
+###
       - DB_URL=dbproj1aws.cnprtk3bvxit.eu-west-2.rds.amazonaws.com
       - DB_USER=useraws
       - DB_NAME=dbproj1_pgres_aws
